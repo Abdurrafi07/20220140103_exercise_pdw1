@@ -1,0 +1,171 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0; 
+    padding-left: 90px; 
+    padding-right: 90px;
+}
+
+h1 {
+    overflow: auto; /* Membersihkan efek floating */
+    display: flex; /* Mengaktifkan flexbox */
+    align-items: center; /* Mengatur vertikal rata tengah */
+}
+
+h1.heading-with-image {
+    display: flex; /* Mengaktifkan flexbox */
+    align-items: center; /* Mengatur vertikal rata tengah */
+}
+
+h1.heading-with-image img {
+    margin-right: 10px; /* Memberikan jarak antara gambar dan teks */
+    width: 70px; /* Mengatur ukuran gambar */
+    height: auto; /* Menyesuaikan tinggi gambar sesuai proporsi */
+    order: -1; /* Mengatur urutan gambar menjadi sebelum teks */
+}
+
+.navbar {
+    background-color: green;
+    color: #333;
+    padding: 10px;
+    border: 1px solid green;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+/* Tata letak default untuk layar yang lebih lebar (laptop) */
+.navbar {
+    display: flex;
+    flex-direction: row;
+}
+
+.navbar a {
+    color: whitesmoke; /* Mengubah warna teks tautan */
+    text-decoration: none; /* Menghilangkan dekorasi tautan seperti garis bawah */
+    margin-right: 100px; /* Jarak antara pilihan */
+}
+
+.navbar a:hover {
+    text-decoration: underline; /* Menampilkan garis bawah saat tautan dihover */
+}
+
+/* Mengubah tata letak untuk layar yang lebih sempit (ponsel) */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .navbar a {
+        margin-right: 0; /* Menghapus margin antara pilihan */
+        margin-bottom: 10px; /* Menambah jarak antara pilihan */
+    }
+}
+
+/* CSS */
+.hero {
+    background-image: url('../assets/HOME.jpeg'); /* Ganti 'path/to/your/image.jpg' dengan path gambar Anda */
+    background-size: cover; /* Menyesuaikan ukuran gambar agar selalu menutupi area */
+    background-position: center; /* Posisikan gambar di tengah */
+    color: #fff; /* Warna teks */
+    padding: 50px; /* Mengurangi padding untuk konten */
+    text-align: center; /* Posisi teks ke tengah */
+}
+
+.hero h1 {
+    font-size: 24px; /* Atur ukuran font agar tidak terlalu besar */
+}
+
+.hero p {
+    font-size: 18px; /* Atur ukuran font untuk paragraf */
+}
+
+@media (min-width: 768px) {
+    .hero {
+        max-width: auto; /* Batasi lebar konten pada layar yang lebih besar */
+        margin: 0 auto; /* Posisikan konten ke tengah pada layar yang lebih besar */
+    }
+}
+
+/* CSS */
+.achievement-container {
+    position: relative;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+.achievement-items {
+    display: flex;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    scroll-snap-type: x mandatory; /* Snap scrolling to individual items */
+    scroll-behavior: smooth; /* Smooth scrolling */
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* Additional styling for achievement items to make them look like cards */
+.achievement-item {
+    flex-shrink: 0; /* Prevent shrinking */
+    min-width: 300px; /* Set minimum width for each item */
+    scroll-snap-align: start; /* Snap each item to the start of the scroll container */
+    background-color: #fff; /* Background color */
+    border: 1px solid #ddd; /* Border */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow */
+    margin-right: 20px; /* Margin between items */
+    overflow: hidden; /* Hide overflowing content */
+}
+
+.achievement-item img {
+    width: 100%; /* Make the image fill the container */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 1310px; /* Limit the maximum width of the image */
+    padding: 15px;
+}
+
+.achievement-item p {
+    padding: 20px;
+    margin: 0;
+}
+
+.scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    color: black;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    z-index: 1;
+}
+
+.scroll-btn:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+
+.prev-btn {
+    left: 0;
+}
+
+.next-btn {
+    right: 0;
+}
+
+h2 {
+    color: green;
+    margin-top: 30px;
+}
+
+p {
+    margin-bottom: 10px; /* Menambahkan jarak bawah pada paragraf */
+}
+
+.content-image {
+    width: 200px; /* Menyesuaikan lebar gambar */
+    height: auto; /* Menyesuaikan tinggi gambar sesuai proporsi */
+    margin: 10px 0; /* Menambahkan jarak atas dan bawah pada gambar */
+}
